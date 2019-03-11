@@ -1,0 +1,74 @@
+{% extends 'Songlutter/base.html' %}
+{% block body %}
+<div class="container-fluid songs-container">
+	<div class="row">
+		<!-- Left album info -->
+		<div class="col-sm-4 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					{% if album.album_logo %}
+					<img src="{{ album.album_logo.url }}" class="img-responsive" >
+					{% else %}
+					<h3>No logo</h3>
+					{% endif %}
+					<h1>{{ album.album_title }} <small>{{ album.genre }}</small></h1>
+					<h2>{{ album.album_artist }}</h2>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Right song info -->
+
+		<div class="col-sm-8 col-md-9 ">
+			<div class="nav nav-pills" style="margin-bottom: 10px">
+
+				<div class="panel panel-default">
+					<div class="panel-body">
+
+						<h3>All albums</h3>
+
+						{% if error_message %}
+						<p> <strong>{{error_message}}</strong> </p>
+						{% endif %}
+
+						<table class="table">
+							<thead>
+								<th>Title</th>
+								<th>Audio File</th>
+								<th>Favorite</th>
+								<th>Action</th>
+							</thead>
+							<tbody>
+								{% for song in album.song_set.all %}
+								<tr>
+									<td>
+										{{ song.song_title }}
+									</td>
+									<td>
+										<a  target="#" href="#"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-play"></span>&nbsp Play</button></a>	
+									</td>
+									<td>
+										<a href="#" class="btn-favorite"><span class="glyphicon glyphicon-star {% if song.favorite %} active {% endif %}"></span></a>
+									</td>
+									<td>
+										<a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>&nbsp Delete</a>
+									</td>
+								</tr>
+
+							</tbody>
+
+
+
+							{% endfor %}
+						</table>
+					</div>
+				</div>
+			</div> 
+		</div>
+
+	</div>
+</div>
+
+{% endblock %}
+</html>
