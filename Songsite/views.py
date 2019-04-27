@@ -7,6 +7,7 @@ from django.views.generic import View
 from .forms import UserForm
 from .models import Album,Song
 
+#  for Homepage
 class IndexView(generic.ListView):
     template_name = 'Songlutter/home.html'
     context_object_name = 'playlists'
@@ -14,12 +15,12 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         return Album.objects.all()
 
-
+# for Album Detail
 class DetailView(generic.DetailView):
     model = Album
     template_name = 'Songlutter/songs.html'
 
-
+# for listing all songs
 class AllSongs(generic.ListView):
     template_name = 'Songlutter/allsongs.html'
     context_object_name = 'songslist'
@@ -28,26 +29,28 @@ class AllSongs(generic.ListView):
         return Song.objects.all()
 
 
-
+# for creating new album
 class AlbumCreate(CreateView):
     model = Album
     fields = ['album_title','album_artist','genre','album_logo']
 
 
-
+# for Updating Existing album
 class AlbumUpdate(UpdateView):
     model = Album
     fields = ['album_title','album_artist','genre','album_logo']
 
-
-
+# for deleting album
 class AlbumDelete(DeleteView):
     model = Album
     success_url = reverse_lazy('Songlutter:index')
 
+# for adding songs to album
+class add_song(CreateView):
+    model = Song
+    fields = "__all__"
 
-
-
+# for user registration
 class register(View):
     form_class = UserForm
     template_name = "Songsite/registration_form.html"
@@ -82,6 +85,7 @@ class register(View):
 
         return render(request, self.template_name, {'form': form})
 
+# for user login
 class loginUser(View):
     template_name = 'Songsite/login.html'
 

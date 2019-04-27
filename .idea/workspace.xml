@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cc926fa-5245-41f1-b7a0-467656e92186" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Songsite/templates/Songlutter/allsongs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Songsite/templates/Songsite/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Songsite/templates/Songsite/updateAlbum.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Songsite/templates/Songsite/visit_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Firstweb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Firstweb/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Firstweb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Firstweb/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songsite/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Songsite/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songsite/static/Songlutter/styled.css" beforeDir="false" afterPath="$PROJECT_DIR$/Songsite/static/Songlutter/styled.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songsite/templates/Songlutter/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Songsite/templates/Songlutter/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songsite/templates/Songlutter/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Songsite/templates/Songlutter/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songsite/templates/Songlutter/songs.html" beforeDir="false" afterPath="$PROJECT_DIR$/Songsite/templates/Songlutter/songs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songsite/templates/Songsite/registration_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Songsite/templates/Songsite/registration_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Songsite/templates/Songsite/song_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Songsite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Songsite/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Songsite/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Songsite/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,18 +14,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Songsite/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Songsite/templates/Songsite/visit_base.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -81,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Songsite/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+            <state relative-caret-position="138">
+              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -99,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Songsite/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="14" selection-end-column="34" />
+            <state relative-caret-position="136">
+              <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -111,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Songsite/templates/Songsite/album_form.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Songsite/templates/Songsite/song_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            <state relative-caret-position="153">
+              <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -167,13 +142,14 @@
         <option value="$PROJECT_DIR$/Songsite/models.py" />
         <option value="$PROJECT_DIR$/Songsite/templates/Songsite/updateAlbum.html" />
         <option value="$PROJECT_DIR$/Songsite/templates/Songsite/loagin.html" />
-        <option value="$PROJECT_DIR$/Songsite/urls.py" />
         <option value="$PROJECT_DIR$/Songsite/templates/Songsite/visit_base.html" />
         <option value="$PROJECT_DIR$/Songsite/templates/Songsite/login.html" />
         <option value="$PROJECT_DIR$/Songsite/templates/Songsite/registration_form.html" />
-        <option value="$PROJECT_DIR$/Songsite/views.py" />
         <option value="$PROJECT_DIR$/Songsite/templates/Songlutter/base.html" />
         <option value="$PROJECT_DIR$/Firstweb/settings.py" />
+        <option value="$PROJECT_DIR$/Songsite/urls.py" />
+        <option value="$PROJECT_DIR$/Songsite/views.py" />
+        <option value="$PROJECT_DIR$/Songsite/templates/Songsite/song_form.html" />
       </list>
     </option>
   </component>
@@ -190,7 +166,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,12 +189,13 @@
               <item name="Songlutter" type="462c0819:PsiDirectoryNode" />
               <item name="Songsite" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="Songlutter" type="462c0819:PsiDirectoryNode" />
+              <item name="Songsite" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -322,19 +298,26 @@
       <option name="project" value="LOCAL" />
       <updated>1554311159802</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="working on deleting button and favorite button">
+      <created>1556352018783</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556352018783</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="700" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16902457" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16902457" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32924694" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4996277" weight="0.33450088" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4996277" visible="true" weight="0.33450088" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -527,6 +510,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Firstweb/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Songsite/templates/Songsite/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -544,27 +534,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Songsite/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Songsite/templates/Songsite/updateAlbum.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="42" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songsite/templates/Songsite/album_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -575,20 +548,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Firstweb/settings.py">
+    <entry file="file://$PROJECT_DIR$/Songsite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="138">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Songsite/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="14" selection-end-column="34" />
+        <state relative-caret-position="136">
+          <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Songsite/templates/Songsite/album_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="19" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Songsite/templates/Songsite/song_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
         </state>
       </provider>
     </entry>

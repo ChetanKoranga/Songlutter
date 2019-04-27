@@ -19,10 +19,15 @@ urlpatterns = [
     #delete-album/
     re_path(r'(?P<pk>[0-9]+)/delete/',views.AlbumDelete.as_view(),name='album-delete'),
     #
-    path('register/',views.register.as_view(),name='register'),
+    # for songs
+    # add song to album addsong/albumID
+    re_path('',views.add_song.as_view(), name='add-song'),
     #
+    # Register User
+    path('register/',views.register.as_view(),name='register'),
+    # Login user
     path('login/',views.loginUser.as_view(),name='login'),
-
+    #
     # logout/
     # path('logout/',views.logoutUser.as_view(),name='logout')
     #
