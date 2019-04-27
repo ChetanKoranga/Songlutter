@@ -1,13 +1,11 @@
 from django.views import generic
-from django.views.generic import View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.shortcuts import render,redirect
-from django.contrib.auth import authenticate,login
-from .forms import UserForm
-from .models import Album
 from django.urls import reverse_lazy
-
-
+from django.shortcuts import render,redirect, get_object_or_404
+from django.contrib.auth import authenticate,login
+from django.views.generic import View
+from .forms import UserForm
+from .models import Album,Song
 
 class IndexView(generic.ListView):
     template_name = 'Songlutter/home.html'
@@ -17,15 +15,17 @@ class IndexView(generic.ListView):
         return Album.objects.all()
 
 
-
 class DetailView(generic.DetailView):
     model = Album
     template_name = 'Songlutter/songs.html'
 
 
+class AllSongs(generic.ListView):
+    template_name = 'Songlutter/allsongs.html'
+    context_object_name = 'songslist'
 
-class favorite():
-    pass
+    def get_queryset(self):
+        return Song.objects.all()
 
 
 
@@ -48,7 +48,7 @@ class AlbumDelete(DeleteView):
 
 
 
-class UserFormView(View):
+class register(View):
     form_class = UserForm
     template_name = "Songsite/registration_form.html"
 
@@ -81,3 +81,17 @@ class UserFormView(View):
                     return redirect('Songlutter:index')
 
         return render(request, self.template_name, {'form': form})
+
+class loginUser(View):
+    template_name = 'Songsite/login.html'
+
+    def post(self,request):
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = authenticate(username=username,password=password)
+        if user is not None:
+            if user.is_active:
+                login(request,user)
+                return redirect('Songlutter:index')
+

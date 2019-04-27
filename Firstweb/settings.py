@@ -16,6 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -37,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Songsite',
+    'Songsite.apps.SongsiteConfig',
 ]
 
 MIDDLEWARE = [
@@ -76,13 +77,18 @@ WSGI_APPLICATION = 'Firstweb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'songsiteDB',
-        'USER': 'chetan',
-        'PASSWORD':'chetan123',
-        'HOST':'localhost',
-        'PORT':'3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'songsiteDB',
+    #     'USER': 'chetan',
+    #     'PASSWORD':'chetan123',
+    #     'HOST':'localhost',
+    #     'PORT':'3306',
+    # }
 }
 
 
@@ -126,3 +132,5 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+LOGIN_REDIRECT_URL = 'Songlutter:index'

@@ -1,0 +1,48 @@
+{% extends 'Songlutter/base.html' %}
+{% block body %}
+
+<div class="container-fluid">
+    <div class="col-md-10  col-lg-10">
+        <div class="nav nav-pills">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                        <th>ID</th>
+                        <th>Song</th>
+                        <th>Play</th>
+                        <th>Favorite</th>
+                        <th>Edit</th>
+                        </thead>
+                        <tbody>
+                        {% for song in songslist %}
+                        <tr>
+                            <td>{{song.id}}</td>
+                            <td>{{song.song_title}}</td>
+                            <td>
+                                <a href="">
+                                    <button type='button' class="btn btn-success">
+                                        <span class="glyphicon glyphicon-play"></span>
+                                    </button>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="" class="btn-favorite"><span class="glyphicon glyphicon-star"></span></a>
+                            </td>
+                            <td>
+                                <a href="">
+                                    <button type='button' class="btn btn-danger">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </button>
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

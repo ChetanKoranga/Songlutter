@@ -49,7 +49,7 @@
 									<a  target="#" href="#"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-play"></span>&nbsp Play</button></a>
 								</td>
 								<td>
-									<a href="#" class="btn-favorite"><span class="glyphicon glyphicon-star {% if song.favorite %} active {% endif %}"></span></a>
+									<a href="{% url 'Songlutter:song-favorite' song.id %}" class="btn-favorite"><span class="glyphicon glyphicon-star {% if song.favorite %} active {% endif %}"></span></a>
 								</td>
 								<td>
 									<a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>&nbsp Delete</a>
