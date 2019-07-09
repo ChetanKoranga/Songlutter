@@ -21,7 +21,7 @@ urlpatterns = [
     #
     # for songs
     # add song to album addsong/albumID
-    re_path('',views.add_song.as_view(), name='add-song'),
+    re_path('addsong',views.add_song.as_view(), name='add-song'),
     #
     # Register User
     path('register/',views.register.as_view(),name='register'),

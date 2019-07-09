@@ -1,8 +1,7 @@
 {% extends 'Songlutter/base.html' %}
 {% block body %}
+
 <div class="album-container container-fluid">
-
-
 	{% if playlists %}
 	{% for album in playlists %}
 
@@ -18,7 +17,7 @@
 				<h4>{{album.album_artist}}</h4>
 
 				<!-- view details -->
-				<a href="{%url 'Songlutter:detail' album.id %}" class="btn btn-primary btn-sm" role="button">
+				<a href="{% url 'Songlutter:detail' album.id %}" class="btn btn-primary btn-sm" role="button">
 					View Details
 				</a>
 
